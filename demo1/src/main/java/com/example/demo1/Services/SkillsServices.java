@@ -14,7 +14,7 @@ public class SkillsServices {
     @Autowired
     ProfileRepository profileRepository;
 
-    public Skills createSkillType(Integer id,Skills skill) {
+    public Skills createSkill(Integer id,Skills skill) {
         Skills skill1=skillsRepository.save(skill);
         Profile profile=profileRepository.findById(id).orElse(null);
         profile.getSkills().add(skill1);
@@ -22,11 +22,11 @@ public class SkillsServices {
         return skill1;
     }
 
-    public Skills getById(Integer id) {
+    public Skills getSkill(Integer id) {
         return skillsRepository.findById(id).get();
     }
 
-    public void deleteSkillType(Integer id) {
+    public void deleteSkill(Integer id) {
         skillsRepository.deleteById(id);
     }
 }

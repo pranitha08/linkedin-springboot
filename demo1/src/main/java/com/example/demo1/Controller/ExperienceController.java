@@ -5,9 +5,6 @@ import com.example.demo1.entity.Experience;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Optional;
-
 @RestController
 @RequestMapping("/experience")
 public class ExperienceController {
@@ -15,8 +12,8 @@ public class ExperienceController {
     ExperienceServices experienceServices;
 
     @GetMapping(value = "get/{id}")
-    public Experience get(@PathVariable Integer id) {
-        return experienceServices.get(id);
+    public Experience getExperience(@PathVariable Integer id) {
+        return experienceServices.getExperience(id);
     }
 
     @PostMapping("/post/{id}")

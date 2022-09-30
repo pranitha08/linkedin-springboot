@@ -4,7 +4,6 @@ import com.example.demo1.entity.Education;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/education")
@@ -12,8 +11,8 @@ public class EducationController {
     @Autowired
     EducationServices educationServices;
     @GetMapping(value = "/get/{id}")
-    public Education getById(@PathVariable Integer id) {
-        return educationServices.getById(id);
+    public Education getEducation(@PathVariable Integer id) {
+        return educationServices.getEducation(id);
     }
 
     @PostMapping("/post/{id}")

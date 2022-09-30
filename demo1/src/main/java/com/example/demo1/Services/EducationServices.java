@@ -1,5 +1,4 @@
 package com.example.demo1.Services;
-
 import com.example.demo1.Repository.EducationRepository;
 import com.example.demo1.Repository.ProfileRepository;
 import com.example.demo1.entity.*;
@@ -15,7 +14,7 @@ public class EducationServices {
     ProfileRepository profileRepository;
 
 
-    public Education getById(Integer id) {
+    public Education getEducation(Integer id) {
         return educationRepository.findById(id).get();
     }
 

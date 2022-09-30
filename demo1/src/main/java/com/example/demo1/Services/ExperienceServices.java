@@ -18,7 +18,7 @@ public class ExperienceServices {
     ProfileRepository profileRepository;
 
 
-    public Experience get(Integer id) {
+    public Experience getExperience(Integer id) {
         return  experienceRepository.findById(id).get();
 
     }

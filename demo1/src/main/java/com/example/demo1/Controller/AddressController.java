@@ -11,8 +11,8 @@ public class AddressController {
     AddressServices addressServices;
 
     @GetMapping(value = "/{id}")
-    public Address getById(@PathVariable Integer id) {
-        return addressServices.getById(id);
+    public Address getAddress(@PathVariable Integer id) {
+        return addressServices.getAddress(id);
     }
 
 

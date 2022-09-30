@@ -18,7 +18,7 @@ public class ProfileServices {
     LoginRepository loginRepository;
 
 
-    public Profile getById(Integer id) {
+    public Profile getProfile(Integer id) {
         return profileRepository.findById(id).get();
     }
 

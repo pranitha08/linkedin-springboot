@@ -14,12 +14,10 @@ public class ProfileController {
     @Autowired
     ProfileServices profileServices;
 
-
     @GetMapping(value = "/{id}")
-    public Profile getById(@PathVariable Integer id) {
-        return profileServices.getById(id);
+    public Profile getProfile(@PathVariable Integer id) {
+        return profileServices.getProfile(id);
     }
-
 
 
     @PostMapping("/post/{id}")

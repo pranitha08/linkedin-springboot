@@ -8,8 +8,6 @@ import com.example.demo1.entity.Profile;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class AddressServices {
@@ -21,7 +19,7 @@ public class AddressServices {
     ProfileRepository profileRepository;
 
 
-    public Address getById(Integer id) {
+    public Address getAddress(Integer id) {
         return addressRepository.findById(id).get();
     }
 
